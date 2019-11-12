@@ -10,26 +10,33 @@ public class Compra {
     
     private int prezo;
     private int unidades;
-    private int cantidade= prezo * unidades;
+    private int cantidade;
     
     // constructor con parámetros
     public void Descuentos (){
-        System.out.println("Dime el precio:");
-    prezo=sc.nextInt();
         System.out.println("Dime la cantidad de productos:");
     unidades=sc.nextInt();
+      System.out.println("Dime el precio:");
+    prezo=sc.nextInt();
     
-    if (unidades<100){
-            System.out.println(cantidade);
-    }
+    cantidade=prezo*unidades;
    
-    if (100<=unidades && unidades<200){
-        if (prezo>4000)
+    if (unidades<100){
+            System.out.println("El precio a pagar es de: "+cantidade);
+    }
+   else
+    if( unidades<200){
+        if (prezo>4000){
             cantidade=cantidade-((cantidade*5)/100);
         System.out.println("El precio a pagar es de: "+cantidade);
-    
-        if (unidades>=200){
-            if (prezo>4000)
+        }
+        else
+        cantidade=cantidade-((cantidade*2)/100);
+    System.out.println("El precio a pagar es de: "+cantidade);
+    }
+    else
+    if (unidades>=200){
+            if (prezo>4000){
                 cantidade=cantidade-((cantidade*10)/100);
             System.out.println("El precio a pagar es de: "+cantidade);
         }
@@ -38,13 +45,9 @@ public class Compra {
         System.out.println("El precio a pagar es de: "+cantidade);
     }
     else
-        cantidade=cantidade-((cantidade*2)/100);
-    System.out.println("El precio a pagar es de: "+cantidade);
-}
+       cantidade=cantidade-((cantidade*8)/100);
+        System.out.println("El precio a pagar es de: "+cantidade);
     
-    
-    
-    
-    
+    }
     
 }
