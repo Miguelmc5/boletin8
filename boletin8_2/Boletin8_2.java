@@ -6,12 +6,11 @@ package boletin8_2;
  */
 public class Boletin8_2 {
 
-   
     public static void main(String[] args) {
         // TODO code application logic here
-    Compra ticket=new Compra();
-    ticket.Descuentos();   
-    
+        Compra ticket = new Compra();
+        ticket.Descuentos();
+
     }
-    
+
 }
