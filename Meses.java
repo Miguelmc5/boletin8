@@ -5,47 +5,36 @@ import java.util.*;
  * @author usuario
  */
 public class Meses {
-      Scanner teclado = new Scanner(System.in);
-    private int mes;
-    private int dias;
+       
+    public void DiaMes(int num) {
 
-    public Meses() {
-    }
-
-    public Meses(int mes, int dias) {
-        this.mes = mes;
-        this.dias = dias;
-    }
-
-    public int getMes() {
-        return mes;
-    }
-
-    public int getDias() {
-        return dias;
-    }
-
-    public void setMes(int mes) {
-        this.mes = mes;
-    }
-
-    public void setDias(int dias) {
-        this.dias = dias;
-    }
-    
-    public void datos(){
-        System.out.println("Escribe o número do mes:");
-        mes = teclado.nextInt();
-        
-    }
-    
-    public String diasMes(){
-        if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
-            dias = 31;
+        switch (num) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:    
+            case 8:
+            case 10:
+            case 12:
+                System.out.println("Tiene 31");
+                break;
+            
+            case 2:
+                System.out.println("Tiene 28");
+                break;   
+            
+            case 4:    
+            case 6:
+            case 9:
+            case 11:
+                System.out.println("Tiene 30");
+                break;
+            
+            default:
+                System.out.println("No es un mes");   
+                    
         }
-        else{
-            dias = 30;
-        }
-        return ("O mes "+mes+" ten "+dias+" dias");
+
     }
-} 
+
+}
